@@ -24,20 +24,14 @@ console.log(isValidWalk(inputArray));
 function isValidWalk(path) {
 
     // path must always take 10 minutes to traverse
-    if( !(path.length === 10) ){
+    if( !(path.length === 10) )
         return false;
-    }
 
-    // if given path takes us back to original position
-    // then the number of opposing directions must cancel each other out
+    // the number of opposing directions must always cancel each other out
     return (count("n", path) === count("s", path)) && (count("w", path) === count("e", path));
 
     function count(element, array) {
-        return array.reduce(function (sum, value) {
-            if (value === element)
-                return sum + 1;
-            return sum;
-        }, 0);
+        return array.filter(n => n === element).length;
     }
 
 }
