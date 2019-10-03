@@ -26,26 +26,9 @@ Example:
 potatoes(99, 100, 98) --> 50
 
      dryMatterWeight + ( n * FINAL_PERCENT ) = n
-
      dryMatterWeight  = 1*n - FINAL_PERCENT*n
-
      dryMatterWeight  = n * (1 - FINAL_PERCENT)
-
      dryMatterWeight / (1 - FINAL_PERCENT) = n
-
-
-  smarter solution
-  //
-  //50 = 100-99+49
-  //w1 = w0 - w0*p0 + w1*p1
-  //
-  // =>
-  //
-  //w1 - w1*p1 = w0 - w0*p0
-  //w1*(1 -p1) = w0 - w0*p0
-  //w1 = (w0 - w0*p0) / (1 - p1)
-
-  return Math.trunc(Math.fround((w0 - w0*(p0/100)) / (1 - (p1/100))));
 
  */
 
@@ -54,19 +37,15 @@ console.log(potatoes(82, 127, 80)); // 114
 console.log(potatoes(93, 129, 91)); // 100
 console.log(potatoes(99, 100, 98)); // 50
 
+//int parameter p0 - initial percent of water
+//int parameter w0 - initial weight
+//int parameter p1 - final percent of water
 function potatoes(p0, w0, p1) {
 
-    const originalWaterWeight = w0 * (p0 / 100);
-    const dryMatterWeight = w0 - originalWaterWeight;
-    const final_percent = p1 / 100;
+    const originalWater = w0 * (p0 / 100);
+    const dryMatter = w0 - originalWater;
+    const targetPercent = p1 / 100;
 
-    let n = dryMatterWeight / (1 - final_percent);
-
-    // rounding error
-    let decimal = n - Math.floor(n);
-    if (decimal > 0.999 && decimal < 1)
-        return Math.ceil(n);
-
-    return Math.floor(n);
+    return Math.trunc(Math.fround( dryMatter / (1 - targetPercent) ));
 
 }
