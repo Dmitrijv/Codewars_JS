@@ -33,6 +33,20 @@ potatoes(99, 100, 98) --> 50
 
      dryMatterWeight / (1 - FINAL_PERCENT) = n
 
+
+  smarter solution
+  //
+  //50 = 100-99+49
+  //w1 = w0 - w0*p0 + w1*p1
+  //
+  // =>
+  //
+  //w1 - w1*p1 = w0 - w0*p0
+  //w1*(1 -p1) = w0 - w0*p0
+  //w1 = (w0 - w0*p0) / (1 - p1)
+
+  return Math.trunc(Math.fround((w0 - w0*(p0/100)) / (1 - (p1/100))));
+
  */
 
 
