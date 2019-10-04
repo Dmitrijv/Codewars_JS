@@ -31,13 +31,10 @@ assume inputs will always be valid.
 
 */
 
-const letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-
-const alphabet = letters.slice(0);
-for (let i = 0; i < letters.length; i++) {
-    alphabet.push(letters[i].toUpperCase());
-}
-//console.log(alphabet);
+const alphabet = [
+    "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
+    "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"
+];
 
 const locatorValues = [];
 for (let i = 0; i < alphabet.length; i++) {
@@ -49,23 +46,15 @@ for (let i = 0; i < alphabet.length; i++) {
     charToNum[alphabet[i]] = locatorValues[i];
 }
 
-
-
-//closestNumberIndex(locators,51);
-//closestNumberIndex([1,2,4,8,16,32,64,128,256,444],7);
-//console.log(Math.floor((5 + 8) / 2));
-
-console.log(toLocString(944768023232));
+//console.log(toLocString(944768023232));
 //console.log(toLocString(-4095)); // -abcdefghijkl
 //console.log(toInt("linux")); // 9447680
 
 
 function toLocString(num) {
 
-    console.log(num);
-
     const prefix = (num < 0) ? "-" : "";
-    num = norm(num);
+    num = Math.sqrt(num * num);
 
     let string = "";
     let maxIndex = locatorValues.length;
@@ -77,11 +66,9 @@ function toLocString(num) {
         string = char + string;
         num -= locatorValues[index];
         maxIndex = index;
-
     }
 
     return prefix + string;
-
 }
 
 function toInt(str) {
@@ -99,10 +86,6 @@ function toInt(str) {
 
     return number;
 
-}
-
-function norm(number) {
-    return Math.sqrt(number * number);
 }
 
 function closestNumberIndex(array, target, maxIndex){
@@ -129,13 +112,8 @@ function closestNumberIndex(array, target, maxIndex){
             startIndex = middleIndex;
         }
 
-        // two values left to check
-        if ((startIndex+1) === endIndex){
-            return startIndex;
-        }
-
-        // one value left
-        if (startIndex === endIndex) {
+        // nothing left to trim
+        if ((startIndex === endIndex) || (startIndex+1) === endIndex ) {
             return startIndex;
         }
 
