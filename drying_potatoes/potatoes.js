@@ -42,8 +42,7 @@ console.log(potatoes(99, 100, 98)); // 50
 //int parameter p1 - final percent of water
 function potatoes(p0, w0, p1) {
 
-    const originalWater = w0 * (p0 / 100);
-    const dryMatter = w0 - originalWater;
+    const dryMatter = w0 - (w0 * (p0 / 100));
     const targetPercent = p1 / 100;
 
     return Math.trunc(Math.fround( dryMatter / (1 - targetPercent) ));
