@@ -7,16 +7,8 @@ console.log(goodVsEvil('1 1 1 1 1 1', '1 1 1 1 1 1 1'));
 
 function goodVsEvil(good, evil){
 
-    const goodUnitCount = good.split(" ").map(x => Number(x));
-    const evilUnitCount = evil.split(" ").map(x => Number(x));
-
-    const goodForces = goodUnitCount.reduce(function(accumulator, value, index) {
-        return accumulator + (goodUnitValues[index] * value);
-    });
-
-    const evilForces = evilUnitCount.reduce(function(accumulator, value, index) {
-        return accumulator + (evilUnitValues[index] * value);
-    });
+    const goodForces = getFactionForce(good, goodUnitValues);
+    const evilForces = getFactionForce(evil, evilUnitValues);
 
     if (goodForces > evilForces)
         return 'Battle Result: Good triumphs over Evil';
@@ -24,5 +16,14 @@ function goodVsEvil(good, evil){
         return 'Battle Result: Evil eradicates all trace of Good';
     else
         return 'Battle Result: No victor on this battle field';
+
+    function getFactionForce(units, unitValues) {
+
+        units = units.split(" ").map(x => Number(x));
+        return units.reduce(function(accumulator, value, index) {
+            return accumulator + (unitValues[index] * value);
+        });
+
+    }
 
 }
