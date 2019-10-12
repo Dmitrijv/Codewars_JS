@@ -23,7 +23,7 @@ Output  3
  */
 
 //console.log(countSixes(10));    // 3
-console.log(countSixes(66));    // 3
+console.log(countSixes(10));    // 3
 //console.log(countSixes(100000));    // 3
 
 function countSixes(n) {
@@ -41,7 +41,7 @@ function countSixes(n) {
             nvals[i] = newval;
         }
 
-        //console.log(nvals);
+        console.log(nvals.length);
         //console.log(n);
         return (nvals[n-1] + nvals[n-2]) / 2;
     }
