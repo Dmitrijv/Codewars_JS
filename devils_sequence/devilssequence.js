@@ -23,22 +23,46 @@ Output  3
  */
 
 //console.log(countSixes(10));    // 3
-console.log(countSixes(583));    // 175 (1)
-console.log(countSixes(1276));    // 384 (1)
-console.log(countSixes(2386));    // 718 (3)
-
-console.log(countSixes(25737));    // 7747 (27)
-console.log(countSixes(52991));    // 15951 (54)
-
-console.log(countSixes(72161));    // 21722 (71)
-console.log(countSixes(99811));    // 30045 (102)
-
-console.log(countSixes(100000));    // 30102 (102)
+console.log(countSixes(66));    // 3
+//console.log(countSixes(100000));    // 3
 
 function countSixes(n) {
 
-    const lastDigit = Number(n.toString().split('').pop());
+    return getNumberOfSixes( getXofN(n) );
 
-    return (3 * Math.floor(n/10)) + Math.floor(lastDigit/4);
+    function getXofN(n) {
+
+        let nvals = [0,1];
+        console.log(0, getNumberOfSixes(0));
+        console.log(1, getNumberOfSixes(1));
+        for (let i = 2; i < n; i++){
+            const newval = (nvals[i-1] + nvals[i-2]) / 2;
+            console.log(i, getNumberOfSixes(newval), newval);
+            nvals[i] = newval;
+        }
+
+        //console.log(nvals);
+        //console.log(n);
+        return (nvals[n-1] + nvals[n-2]) / 2;
+    }
+
+    function getNumberOfSixes(number) {
+
+        let decimals = getDecimals(number).toString().split("").slice(2);
+        //console.log(decimals);
+        let count = 0;
+        for (let i = 0; i < decimals.length; i++) {
+            if (decimals[i] === '6')
+                count++;
+            else
+                break;
+        }
+        return count;
+    }
+
+    function getDecimals(number) {
+        return number - Math.floor(number)
+    }
+
 
 }
