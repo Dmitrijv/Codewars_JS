@@ -24,45 +24,64 @@ Output  3
 
 //console.log(countSixes(10));    // 3
 console.log(countSixes(10));    // 3
-//console.log(countSixes(100000));    // 3
+//console.log(countSixes(583));    // 175
+console.log(countSixes(583));    // 175
+
+console.log(countSixes(100000));    // 3
 
 function countSixes(n) {
 
-    return getNumberOfSixes( getXofN(n) );
+    //console.log(Math.log2(n));
 
-    function getXofN(n) {
 
-        let nvals = [0,1];
-        console.log(0, getNumberOfSixes(0));
-        console.log(1, getNumberOfSixes(1));
-        for (let i = 2; i < n; i++){
-            const newval = (nvals[i-1] + nvals[i-2]) / 2;
-            console.log(i, getNumberOfSixes(newval), newval);
-            nvals[i] = newval;
-        }
+    /*
+    const n0 = Math.log10(2) * (n-1);
+    const n1 = Math.log10(2) * n;
+    const n2 = Math.log10(2) * (n+1);
 
-        console.log(nvals.length);
-        //console.log(n);
-        return (nvals[n-1] + nvals[n-2]) / 2;
+    if (n1 === n2 && n1 === (n0 + 1) && (n % 2 !== 0))
+        return n0;
+
+    return n1;
+    */
+
+    //+2/3/(2^n)  and  1/3/(10^t)  - when odd(n)
+    if (n % 2 !== 0){
+
+        let t = (Math.log(3)+(n - 2) * Math.log(2)) / Math.log(10);
+
+        let v1 = (2/3) / Math.pow(2, n);
+        let v2 = (1/3) / Math.pow(10, t);
+
+        console.log(t);
+        console.log(v1);
+        console.log(v2);
+
+    } else {
+
+        console.log(t);
+
     }
 
-    function getNumberOfSixes(number) {
+    // x[n] = J[n]/2^(n-1), J[n] - Jacobsthal number and J[n] = (2^n - (-1)^n)/3.
 
-        let decimals = getDecimals(number).toString().split("").slice(2);
-        //console.log(decimals);
-        let count = 0;
-        for (let i = 0; i < decimals.length; i++) {
-            if (decimals[i] === '6')
-                count++;
-            else
-                break;
-        }
-        return count;
-    }
+    //let jn = ( Math.log2(n) - (Math.pow(-1,n)) ) / 3;
+    //console.log( jn / Math.log2(n-1) );
 
-    function getDecimals(number) {
-        return number - Math.floor(number)
-    }
+    /*
+    //console.log(2/3);
+    console.log("----");
+    console.log( (1/3) / Math.log10(n) );
+    console.log( (2/3) / Math.log10(n) );
 
+    console.log("----");
+    console.log( (1/3) / Math.log10(n-1) );
+    console.log( (2/3) / Math.log10(n-1) );
+
+    console.log("----");
+    console.log( (1/3) / Math.log10(n-2) );
+    console.log( (2/3) / Math.log10(n-2) );
+    */
+    //console.log((2/3) - ( Math.log10(n) * (2/3)) );
 
 }
