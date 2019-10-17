@@ -41,3 +41,20 @@ function christmasTree(height) {
         return 1 + (2*(level-1));
     }
 }
+
+
+
+/*
+
+    cleaner solution
+
+function christmasTree(height) {
+    let tree = [];
+    for (let i = 0; i < height; i++ ) {
+        tree.push(" ".repeat(height-i-1) + "*".repeat(2*i+1) + " ".repeat(height-i-1));
+    }
+    return tree.join('\n');
+}
+
+
+ */
