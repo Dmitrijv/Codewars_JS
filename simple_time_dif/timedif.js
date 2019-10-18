@@ -29,7 +29,7 @@ function solve(arr){
     if (arr.length === 1) return secondsToTime((24*60*60)-ALARM_DURATION_SECONDS);
 
     const longestDif = arr.sort().reduce(function(longestTime, time, index) {
-        let dif = (index === (arr.length-1)) ? timeDifInSeconds(time, arr[0], true) : timeDifInSeconds(time, arr[index+1])
+        let dif = (index === (arr.length-1)) ? timeDifInSeconds(time, arr[0], true) : timeDifInSeconds(time, arr[index+1]);
         if (dif > longestTime)
             return dif;
         return longestTime;
