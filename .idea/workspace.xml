@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a2d59a8c-12f6-473b-9d08-9f37c277232c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/merge_strings/merge_strings.js" beforeDir="false" afterPath="$PROJECT_DIR$/merge_strings/merge_strings.js" afterDir="false" />
+    <list default="true" id="a2d59a8c-12f6-473b-9d08-9f37c277232c" name="Default Changelist" comment="solved array pyramid kata">
+      <change afterPath="$PROJECT_DIR$/file_finder/filefinder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/count_letters/countletters.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="52" lean-forward="true" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+            <state relative-caret-position="90">
+              <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -31,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pyramid_array/pyramid_array.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="36" column="3" lean-forward="true" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
+            <state relative-caret-position="468">
+              <caret line="36" column="3" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -40,11 +41,34 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/merge_strings/merge_strings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state>
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deep_compare/compare.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="117" column="23" lean-forward="true" selection-start-line="117" selection-start-column="23" selection-end-line="117" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/file_finder/filefinder.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="53" column="47" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -52,7 +76,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/anagrams/anagrams.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
+            <state relative-caret-position="540">
               <caret line="30" selection-start-line="30" selection-end-line="34" />
             </state>
           </provider>
@@ -61,8 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/iq_test/iqtest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="270">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -79,7 +103,7 @@
         <entry file="file://$PROJECT_DIR$/find_unique/findunique.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="486">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -114,12 +138,13 @@
         <option value="$PROJECT_DIR$/count_letters/countletters.js" />
         <option value="$PROJECT_DIR$/pyramid_array/pyramid_array.js" />
         <option value="$PROJECT_DIR$/merge_strings/merge_strings.js" />
+        <option value="$PROJECT_DIR$/file_finder/filefinder.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="57" />
-    <option name="y" value="35" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-5" />
+    <option name="y" value="36" />
     <option name="width" value="1600" />
     <option name="height" value="900" />
   </component>
@@ -131,8 +156,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -143,47 +166,14 @@
             <path>
               <item name="Codewars_JS" type="b2602c69:ProjectViewProjectNode" />
               <item name="Codewars_JS" type="462c0819:PsiDirectoryNode" />
-              <item name="anagrams" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Codewars_JS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Codewars_JS" type="462c0819:PsiDirectoryNode" />
-              <item name="find_unique" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Codewars_JS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Codewars_JS" type="462c0819:PsiDirectoryNode" />
-              <item name="good_vs_evil" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Codewars_JS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Codewars_JS" type="462c0819:PsiDirectoryNode" />
-              <item name="iq_test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Codewars_JS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Codewars_JS" type="462c0819:PsiDirectoryNode" />
-              <item name="locator_numbers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Codewars_JS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Codewars_JS" type="462c0819:PsiDirectoryNode" />
-              <item name="merge_strings" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Codewars_JS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Codewars_JS" type="462c0819:PsiDirectoryNode" />
-              <item name="simple_time_dif" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Codewars_JS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Codewars_JS" type="462c0819:PsiDirectoryNode" />
-              <item name="sort_the_odd" type="462c0819:PsiDirectoryNode" />
+              <item name="file_finder" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -199,7 +189,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2166362" />
   </component>
   <component name="RecentsManager">
@@ -247,7 +237,8 @@
       <workItem from="1571299529229" duration="5094000" />
       <workItem from="1571341781649" duration="2537000" />
       <workItem from="1571405064960" duration="12111000" />
-      <workItem from="1571641236187" duration="6174000" />
+      <workItem from="1571641236187" duration="7296000" />
+      <workItem from="1571653758771" duration="3549000" />
     </task>
     <task id="LOCAL-00001" summary="cleaned up solution for 10 min walk problem">
       <created>1569616325605</created>
@@ -379,7 +370,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99157000" />
+    <option name="totallyTimeSpent" value="103828000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -394,7 +385,7 @@
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1625964" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14974293" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -504,13 +495,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deep_compare/compare.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2358">
-          <caret line="131" column="9" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/good_vs_evil/goodvsevil.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -544,10 +528,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/count_letters/countletters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyramid_array/pyramid_array.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="36" column="3" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anagrams/anagrams.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" selection-start-line="30" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/iq_test/iqtest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="270">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -560,41 +571,33 @@
     <entry file="file://$PROJECT_DIR$/find_unique/findunique.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/anagrams/anagrams.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="30" selection-start-line="30" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/count_letters/countletters.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="52" lean-forward="true" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyramid_array/pyramid_array.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="36" column="3" lean-forward="true" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/merge_strings/merge_strings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deep_compare/compare.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="117" column="23" lean-forward="true" selection-start-line="117" selection-start-column="23" selection-end-line="117" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file_finder/filefinder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="53" column="47" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
