@@ -23,6 +23,13 @@ console.log(flatten(1, [2, 3], 4, 5, [6, [7]])); // returns [1, 2, 3, 4, 5, 6, 7
 //flatten([2,3]);
 //console.log(flatten([2,3, [1]]));
 
+
+/* better solution
+var flatten = function(...arr){
+    return arr.toString().split(",");
+}
+*/
+
 function flatten() {
 
     //console.log(args);
