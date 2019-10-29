@@ -43,8 +43,9 @@ Keys can be any string of characters, excluding the '/' character.
 const testObj = { 'a': { 'b': { 'c': 12, 'd': 'Hello World' }, 'e': [1,2,3] } };
 const testObj2 = { a: { b: true, c: 14.356, d: null, e: { f: flattenMap }, g: [ 1, 2, 3 ] } };
 
-console.log(flattenMap(testObj));
-console.log(flattenMap(testObj2));
+//console.log(flattenMap(testObj));
+//console.log(flattenMap(testObj2));
+
 
 function flattenMap(map) {
 
