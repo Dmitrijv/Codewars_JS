@@ -43,9 +43,8 @@ console.log(nextSmaller(959839604880318)); // 959839604880183
 // permutations([ '2', '1', '7' ]);
 
 function nextSmaller(n){
-    console.log(n)
 
-    if (n > 50000000083559) return 343;
+    console.log(n);
 
     n = n.toString();
     if (n.length === 1) return -1;
@@ -76,10 +75,7 @@ function permutations(chars, n, memo) {
 
     let ret = [];
     let retStr = chars.join();
-    if (memo[retStr]) {
-        console.log("did smth");
-        return memo[retStr];
-    }
+    if (memo[retStr]) { console.log("did smth"); return memo[retStr]; }
 
     for (let i = 0; i < chars.length; i++) {
 
