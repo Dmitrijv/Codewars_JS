@@ -19,6 +19,8 @@ nextSmaller(1027) == -1 // 0721 is out since we don't write numbers with leading
 Some tests will include very large numbers.
 Test data only employs positive integers.
 
+https://codereview.stackexchange.com/questions/200617/python-function-to-find-the-next-smaller-number-with-same-set-of-digits
+
  */
 
 
@@ -30,83 +32,49 @@ Test data only employs positive integers.
 
 //console.log(nextSmaller(1234567908)); // 1234567890
 //console.log(nextSmaller(907)); // 790
+
 //console.log(nextSmaller(9999999999));
-
 console.log(nextSmaller(59884848483559)); // 59884848459853
-console.log(nextSmaller(51226262651257)); // 51226262627551
-console.log(nextSmaller(959839604880318)); // 959839604880183
 
-// console.log(Number([ '5', '3', '1' ].join("")));
-// console.log(perm([1,2,3]).join("\n"));
-// console.log(permutations([ '2', '0', '1', '7' ]));
-// permutations([ '2', '0', '1', '7' ]);
-// permutations([ '2', '1', '7' ]);
+console.log(nextSmaller(1253479)); // 1249753
+
+//console.log(nextSmaller(51226262651257)); // 51226262627551
+//console.log(nextSmaller(959839604880318)); // 959839604880183
+
 
 function nextSmaller(n){
-
-    console.log(n);
 
     n = n.toString();
     if (n.length === 1) return -1;
 
     const chars = n.split("");
 
+    // all characters are the same
     if (chars.every(char => char === chars[0]) === true) return -1;
 
-    const perms = permutations(chars, Number(n));
-
-    let nums = perms.filter(charArr => { return (charArr[0] !== "0") && Number(charArr.join("")) < n });
-    nums = nums.map(charArr => { return Number(charArr.join("")) }).sort();
-    //console.log(nums);
-
-    return (nums.length === 0) ? -1 : nums.pop();
-
-
-
-}
-
-
-function permutations(chars, n, memo) {
-
-    memo = memo || {};
-
-    //console.log(Object.keys(memo).length);
-    //console.log(memo);
-
-    let ret = [];
-    let retStr = chars.join();
-    if (memo[retStr]) { console.log("did smth"); return memo[retStr]; }
-
-    for (let i = 0; i < chars.length; i++) {
-
-        //console.log(chars);
-        //if (i > chars[0]) continue;
-
-        const currentChar = chars[i];
-        //console.log(currentChar);
-
-        const remainingChars = chars.slice(0, i).concat(chars.slice(i + 1));
-        //console.log(remainingChars);
-
-
-        const newNum = (remainingChars.length > 0) ? Number(currentChar) + Number(remainingChars.join("")) : Number(currentChar);
-        if (newNum > n) { console.log(newNum, "break early"); continue; }
-
-        //console.log({ currentChar, remainingChars, newNum});
-
-        let rest = permutations(remainingChars, memo);
-
-        if(!rest.length) {
-            ret.push([currentChar]);
-        } else {
-            for(let j = 0; j < rest.length; j++) {
-                ret.push([currentChar].concat(rest[j]));
+    // start from the last digit and find a digit that is not decreasing or equal
+    let tailStart;
+    for (let i = chars.length-1; i > 0; i--) {
+        const digit = Number(chars[i]);
+        if (chars[i-1]){
+            const nextDigit = Number(chars[i-1]);
+            if (nextDigit > digit) {
+                chars[i-1] = digit;
+                chars[i] = nextDigit;
+                tailStart = i;
+                //console.log({ digit, nextDigit, point, i });
+                break;
             }
         }
-
     }
 
-    //console.log("-----");
-    memo[retStr] = ret;
-    return ret;
+    const prefix = chars.slice(0, tailStart).join("");
+    const tail = reverseString(chars.slice(tailStart, chars.length).join(""));
+
+    return prefix + tail;
+
+    function reverseString(str) {
+        return str.split("").reverse().join("");
+    }
+
 }
