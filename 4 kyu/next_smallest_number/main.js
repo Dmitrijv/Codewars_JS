@@ -1,74 +1,36 @@
 /*
 
-Write a function that takes a positive integer and returns the next smaller positive integer containing the same digits.
+    Write a function that takes a positive integer and returns the next smaller positive integer containing the same digits.
 
-For example:
+    For example:
 
-nextSmaller(21) // 12
-nextSmaller(531) // 513
-nextSmaller(2071) // 2017
+    nextSmaller(21) // 12
+    nextSmaller(531) // 513
+    nextSmaller(2071) // 2017
 
-Return -1 when there is no smaller number that contains the same digits.
-Also return -1 when the next smaller number with the same digits would require the leading digit to be zero.
+    Return -1 when there is no smaller number that contains the same digits.
+    Also return -1 when the next smaller number with the same digits would require the leading digit to be zero.
 
-nextSmaller(9) == -1
-nextSmaller(111) == -1
-nextSmaller(135) == -1
-nextSmaller(1027) == -1 // 0721 is out since we don't write numbers with leading zeros
+    nextSmaller(9) == -1
+    nextSmaller(111) == -1
+    nextSmaller(135) == -1
+    nextSmaller(1027) == -1 // 0721 is out since we don't write numbers with leading zeros
 
-Some tests will include very large numbers.
-Test data only employs positive integers.
+    Some tests will include very large numbers.
+    Test data only employs positive integers.
 
-https://codereview.stackexchange.com/questions/200617/python-function-to-find-the-next-smaller-number-with-same-set-of-digits
+    https://codereview.stackexchange.com/questions/200617/python-function-to-find-the-next-smaller-number-with-same-set-of-digits
 
  */
-
-
-//nextSmaller(21); // 12
-//nextSmaller(531); // 513
-//nextSmaller(2071); // 2017
-
-//console.log( nextSmaller(2071) ); // 2017
-
-//console.log(nextSmaller(1234567908)); // 1234567890
-//console.log(nextSmaller(907)); // 790
-//console.log("expected 790");
-
-//console.log(nextSmaller(9999999999));
-//console.log(nextSmaller(59884848483559)); // 59884848459853
-
-//console.log(nextSmaller(1253479)); // 1249753
-//console.log("expected: ", 1249753);
 
 //console.log(nextSmaller(544)); // 1249753
 //console.log("expected: ", 454);
 
-//console.log("got", nextSmaller(531)); // 153833
-//console.log("expected: ", 513);
-
-//console.log("----------");
-
- 
 //console.log("got", nextSmaller(1721128));
 //console.log("expected: ", 1718221);
 
 //console.log("got", nextSmaller(5857));
 //console.log("expected: ", 5785);
-
-console.log("got", nextSmaller(10)); // 153833
-console.log("expected: ", -1);
-
-
-//console.log("got", nextSmaller(158333)); // 153833
-//console.log("expected: ", 153833);
-
-//console.log("got", nextSmaller(5611)); // 153833
-//console.log("expected: ", 5161);
-
-
-//console.log(nextSmaller(51226262651257)); // 51226262627551
-//console.log(nextSmaller(959839604880318)); // 959839604880183
-
 
 function nextSmaller(n) {
 
@@ -86,8 +48,6 @@ function nextSmaller(n) {
         reverse = Number(reverse);
         return (reverse < n) ? reverse : -1;
     }
-
-
 
     // all characters are the same
     if (chars.every(char => char === chars[0]) === true) return -1;
@@ -149,7 +109,6 @@ function nextSmaller(n) {
             }
 
             tail = tailDigits.sort(function (a, b) { return Number(b) - Number(a) }).join("");
-
             break;
 
         }
