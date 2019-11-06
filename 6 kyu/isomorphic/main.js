@@ -29,7 +29,7 @@
 
 //isomorph("pffffm", "lkkkjd")
 
-console.log(isomorph("ddwwp", "newkb"));
+console.log(isomorph("mclowh", "hmmcip"));
  
 
 function isomorph(a, b) {
@@ -51,17 +51,22 @@ function isomorph(a, b) {
         const letterA = charsA[i];
         const letterB = charsB[i];
         if (!memo[letterA]) {
+            console.log(i + " ", letterA, "is mapped to: ", letterB);
             memo[letterA] = letterB;
         } else {
-            console.log(letterA);
-            console.log(letterB);
+            console.log(i + " " + "known key: ", letterA, letterB);
+            console.log(memo);
             if (memo[letterA] !== letterB) {
                 console.log("returning false");
                 return false;
             }
         }
-        console.log(memo);
+        //console.log(memo);
     }
+
+    console.log(Object.values(memo));
+    console.log("returning true");
     return true;
 
 }
+
