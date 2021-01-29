@@ -17,51 +17,47 @@ the output may be "12 11 10 9 8 7 6 5 4 3 1 2",
 
 
 */
-
-// 121110987654312
-// 1 2 1 1 10 9 8 7 6 5 4 3 1 2
-
-//console.log(addSpaces("121110987654312").split(" "));
-//console.log(addSpaces("121110987654312").split(" ").length);
-
-const test = addSpaces("121110987654312").split(" ");
-const testArr = test.sort((a, b) => a - b);
-
-console.log(testArr);
-console.log(testArr.join());
-
-// '123456789101112', instead got: '111122345678910'
-
-//"123456789101112"
-
 function addSpaces(s) {
-  //console.log(s);
-
   let output = [];
+  let blacklist = {};
 
   for (let index = 0; index < s.length; index++) {
     const leftDigit = s[index];
     const rightDigit = s[index + 1];
 
-    const twoDigitNumber = Number(leftDigit + rightDigit);
+    //console.log(leftDigit)
+    //console.log(rightDigit)
+
     const oneDigitNumber = Number(leftDigit);
+    const twoDigitNumber = Number(leftDigit + rightDigit);
+
+    //console.log(oneDigitNumber)
+    //console.log(twoDigitNumber)
 
     if (rightDigit === "0") {
       output.push(twoDigitNumber);
+      blacklist[twoDigitNumber] = true;
       index++;
     } else {
       if (isValidNumber(oneDigitNumber) === true) {
         output.push(oneDigitNumber);
-      } else {
+        blacklist[oneDigitNumber] = true;
+      } else if (isValidNumber(twoDigitNumber) === true) {
         output.push(twoDigitNumber);
+        blacklist[twoDigitNumber] = true;
         index++;
+      } else {
+        console.log("wtf moment");
       }
     }
   }
 
+  //console.log(blacklist)
   return output.join(" ");
 
   function isValidNumber(n) {
-    return n >= 1 && n < 50;
+    const isInRange = n >= 1 && n < 50;
+    const isBlacklisted = blacklist[n] || false;
+    return isInRange && !isBlacklisted;
   }
 }
