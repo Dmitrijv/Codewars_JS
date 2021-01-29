@@ -1,5 +1,7 @@
 /* 
 
+https://www.codewars.com/kata/596c942361c22e6ae2000450/train/javascript
+
 The task is very simple: You are given a string s. It contains numbers from 1 to n(1<n<50), and the order is confusing.
 You need to add a space between each of the two adjacent numbers to make them look clearer.
 
