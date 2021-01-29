@@ -30,6 +30,8 @@ const testArr = test.sort((a, b) => a - b);
 console.log(testArr);
 console.log(testArr.join());
 
+// '123456789101112', instead got: '111122345678910'
+
 //"123456789101112"
 
 function addSpaces(s) {
